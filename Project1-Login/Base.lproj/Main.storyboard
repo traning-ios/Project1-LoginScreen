@@ -91,15 +91,49 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XSa-ra-KBh">
+                                <rect key="frame" x="20" y="134" width="335" height="172"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7he-a9-PiL">
+                                        <rect key="frame" x="0.0" y="0.0" width="77" height="30"/>
+                                        <state key="normal" title="Show more"/>
+                                        <connections>
+                                            <action selector="onButtonTouched:" destination="iYB-rt-Y47" eventType="touchUpInside" id="6Qc-Q7-DOc"/>
+                                        </connections>
+                                    </button>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nI2-R4-Yii">
+                                        <rect key="frame" x="0.0" y="40" width="2220.5" height="0.0"/>
+                                        <string key="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9H-hE-UNV">
+                                        <rect key="frame" x="0.0" y="50" width="332.5" height="122"/>
+                                        <string key="text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</string>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Uau-Vi-MCV" firstAttribute="top" secondItem="MZs-ih-zVq" secondAttribute="top" constant="20" id="3zs-jC-hJ2"/>
                             <constraint firstItem="Uau-Vi-MCV" firstAttribute="leading" secondItem="MZs-ih-zVq" secondAttribute="leading" constant="20" id="OVM-JP-CoB"/>
+                            <constraint firstItem="XSa-ra-KBh" firstAttribute="top" secondItem="Uau-Vi-MCV" secondAttribute="bottom" constant="20" id="U3q-uf-l6q"/>
                             <constraint firstItem="MZs-ih-zVq" firstAttribute="trailing" secondItem="Uau-Vi-MCV" secondAttribute="trailing" constant="20" id="WUT-SE-EaU"/>
+                            <constraint firstAttribute="trailing" secondItem="XSa-ra-KBh" secondAttribute="trailing" constant="20" id="it9-Qd-NPj"/>
+                            <constraint firstItem="XSa-ra-KBh" firstAttribute="leading" secondItem="MZs-ih-zVq" secondAttribute="leading" constant="20" id="mLg-JY-lgi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MZs-ih-zVq"/>
                     </view>
+                    <connections>
+                        <outlet property="mButton" destination="7he-a9-PiL" id="gI3-rh-Rn6"/>
+                        <outlet property="mLabel1" destination="nI2-R4-Yii" id="FTT-CR-3HO"/>
+                        <outlet property="mLabel2" destination="g9H-hE-UNV" id="jDt-yC-fct"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ij2-cI-Fbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

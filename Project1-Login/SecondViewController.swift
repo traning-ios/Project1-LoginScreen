@@ -9,13 +9,21 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    @IBOutlet weak var mButton: UIButton!
+    @IBOutlet weak var mLabel1: UILabel!
+    @IBOutlet weak var mLabel2: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         hideKeyboardWhenTappedAround()
     }
 
+    @IBAction func onButtonTouched(_ sender: Any) {
+        mLabel1.isHidden  = !mLabel1.isHidden
+        mButton.setTitle(mLabel1.isHidden ? "Show more" : "show less", for: .normal)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
